@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- Include necessary CSS styles -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="index.css">
+   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+   <header>
+      <div class="company-logo">LAPTOP SHOP</div>
+      <nav class="navbar">
+         <ul class="nav-items">
+            <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">OFFER</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">SHOP</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
+         </ul>
+      </nav>
+      <div class="menu-toggle">
+         <i class="bx bx-menu"></i>
+         <i class="bx bx-x"></i>
+      </div>
+   </header>
+
+   <main>
+      <!-- HOME SECTION -->
+      <section class="container section-1">
+         <div class="slogan">
+            <h1 class="company-title">DOWNTOWN TECH LIVER</h1>
+            <h2 class="company-slogan">
+               The biggest computer shop in the area where customers come first.
+            </h2>
+         </div>
+         <div class="home-computer-container">
+            <img class="home-computer" src="images/home_img.png" alt="a computer in dark with shadow"
+               class="home-img">
+         </div>
+      </section>
+
+      <!-- OFFER SECTION -->
+      <section class="container section-2">
+         <!-- offer 1 -->
+         <div class="offer offer-1">
+            <img src="/images/apple home.jpg" alt="a computer in dark with with white shadow"
+               class="offer-img offer-1-img">
+            <div class="offer-description offer-desc-1">
+               <h2 class="offer-title">Apple Products</h2>
+               <p class="offer-hook">Powerful, sleek design, vibrant display, seamless performance, exceptional
+                  productivity...</p>
+                  <li class="cart-btn"><a href="apple.html" class="link">VIEWMORE</a></li>
+            </div>
+         </div>
+         <!-- offer 2 -->
+         <div class="offer offer-2">
+            <img src="/images/Lenovo home.jpg" alt="a opened computer" class="offer-img offer-2-img">
+            <div class="offer-description offer-desc-2">
+               <h2 class="offer-title">Lenovo Producrs</h2>
+               <p class="offer-hook"> Innovative, reliable, versatile, cutting-edge technology, user-friendly, robust
+                  performance, elegant design...</p>
+                  <!-- lenovo laptop view more option -->
+                  <li class="cart-btn"><a href="lenovo.html" class="link">VIEWMORE</a></li>
+               <ul class="links-container">
+            </ul>
+            </div>
+         </div>
+      </section>
+
+      <!-- PRODUCT SECTION -->
+      <section class="container section-3">
+         <!-- product - 1 -->
+         <div class="product product-1">
+            <img src="/images/b-1.png" alt="computer to sell" class="product-img">
+            <span class="product_add_cart">ADD TO CART</span>
+         </div>
+         <!-- product - 2 -->
+         <div class="product product-2">
+            <img src="/images/b-2.png" alt="computer to sell" class="product-img">
+            <span class="product_add_cart">ADD TO CART</span>
+         </div>
+         <!-- product - 3 -->
+         <div class="product product-3">
+            <img src="/images/b-3.png" alt="computer to sell" class="product-img">
+            <span class="product_add_cart">ADD TO CART</span>
+         </div>
+         <!--You can Add more products-->
+      </section>
+
+      <!-- SUBSCRIBE SECTION-->
+      <section class="container section-5">
+         <h2 class="subscribe-input-label">CUSTOMER CARE...</h2>
+         <div class="subscribe-container">
+            <input type="text" id="email-subscribe" placeholder="Email address...">
+            <input type="submit" value="SUBMIT">
+         </div>
+      </section>
+   </main>
+
+   <footer>
+      <div class="container top-footer">
+         <!-- footer item 1 -->
+         <div class="footer-item">
+            <h2 class="footer-title">ADDRESS</h2>
+            <div class="footer-items">
+               <h3>1 Apple Park Way,</h3>
+               <h3>Cupertino, CA 95014,</h3>
+               <h3>United States.</h3>
+            </div>
+         </div>
+         <!-- footer item 2 -->
+         <div class="footer-item">
+            <h2 class="footer-title">SERVICES</h2>
+            <div class="footer-items">
+               <h3>Authorized Service Center</h3>
+               <h3>Service and Repair Information.</h3>
+               <h3>Hardware Warranties.</h3>
+               <h3>Complimentary Support.</h3>
+            </div>
+         </div>
+         <!-- footer item 3 -->
+         <div class="footer-item">
+            <h2 class="footer-title">RESOURCES</h2>
+            <div class="footer-items">
+               <h3>My Support.</h3>
+               <h3>Downloads.</h3>
+               <h3>Tech Specs.</h3>
+               <h3>Accessibility.</h3>
+            </div>
+         </div>
+         <!-- Add More footer items -->
+      </div>
+   </footer>
+
+   <script>
+      // JavaScript code for "VIEW MORE" button
+      let loadMoreBtn = document.querySelector('.cart-btn');
+      let currentItem = 3;
+
+      loadMoreBtn.onclick = () => {
+         let boxes = [...document.querySelectorAll('.container .box-container .box')];
+         for (var i = currentItem; i < currentItem + 3; i++) {
+            boxes[i].style.display = 'inline-block';
+         }
+         currentItem += 3;
+
+         if (currentItem >= boxes.length) {
+            loadMoreBtn.style.display = 'none';
+         }
+      }
+   </script>
+
+   <script src="index.js"></script>
+</body>
+
+</html>
